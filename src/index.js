@@ -1,17 +1,32 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 //const element = React.createElement('hi', null, 'Hello React World');
-const element = (
+const TodoList = () => {
+  return (
+    <ul>
+      <li>Install React</li>
+      <li>Study React</li>
+      <li>Use React</li>
+      <li>Build React App</li>
+    </ul>
+  );
+}
+
+const AppHeader = () =>{
+  return <h1>My Todo List</h1>;
+};
+const SearchPanel = () => {
+  return <input placeholder="search" />;
+}
+const App = () => {
+  return (
     <div>
-        <h1>My Todo List</h1>
-        <input placeholder="search" />
-        <ul>
-            <li>Install React</li>
-            <li>Study React</li>
-            <li>Use React</li>
-            <li>Build React App</li>
-        </ul>
+        <AppHeader />
+        <SearchPanel />
+        <TodoList/>
     </div>
-    );
-    ReactDOM.render(element,
-        document.getElementById('root'));
+  );
+}
+
+  ReactDOM.render(<App />,
+    document.getElementById('root'));
